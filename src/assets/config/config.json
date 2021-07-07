@@ -1,0 +1,6 @@
+{
+    "api": {
+        "apiRoot": "./webapp",
+        "urlService": "http://localhost:3334/"
+    }
+}

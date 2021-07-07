@@ -1,0 +1,14 @@
+.toolbar {
+    background-color: #294ED7;
+    color: white;
+    font-weight: 600;
+  }
+
+.toolbar a {
+  position: relative;
+  margin: 0 16px !important;
+}
+
+a.sidenav-trigger {
+  display: block;
+}
