@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { MainModule } from './main/main.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
+import { ToolsModule } from './tools/tools.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     GenericModule,
-    MainModule
+    MainModule,
+    ToolsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AppConfig,

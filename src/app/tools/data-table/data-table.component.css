@@ -1,0 +1,35 @@
+
+div.table-header {
+    padding-left: 24px;
+    padding-right: 14px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-display: flex;
+    background-color: #81A8CD;
+    color:#404040;
+    font-size: large;
+    border-radius: 1.0rem 1.0rem 0px 0px;
+    
+  }
+  
+  div.table-header .actions {
+    display: -webkit-flex;
+    margin-left: auto;
+  }
+  
+  div.table-header .btn-flat {
+      min-width: 36px;
+      padding: 0 8px;
+  }
+  
+  div.table-header input {
+    margin: 0;
+    height: auto;
+  }
+  
+  div.table-header i {
+    color: #404040;
+    font-size: 24px;
+  }

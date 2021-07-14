@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GenericModule } from '../generic/generic.module';
+import { ToolsModule } from '../tools/tools.module';
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { UsersComponent } from './users/users.component';
@@ -18,7 +19,8 @@ import { UsersComponent } from './users/users.component';
     ReactiveFormsModule,
     HttpClientModule,
     GenericModule,
-    MainRoutingModule
+    MainRoutingModule,
+    ToolsModule
   ],
   exports:[
     MainComponent,

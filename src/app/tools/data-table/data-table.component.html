@@ -1,0 +1,29 @@
+<div *ngIf="tableOptions">
+
+  <div class="table-header">
+    <span class="table-title">{{ tableOptions.title}}</span>
+    <div class="actions">
+      <a *ngIf="tableOptions.addButton" class="waves-effect btn-flat nopadding" (click)="onButtonsExecute(['create'])"><i class="material-icons">person_add</i></a>
+      <a class="waves-effect btn-flat nopadding"><i class="material-icons">search</i></a>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="tableOptions.data" class="mat-elevation-z8 demo-table">
+
+    <ng-container *ngIf="tableOptions.editButton" [matColumnDef]="tableOptions.widgetId + 'btnVisualizar'">
+      <th style="width: 10%;" mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"><a (click)="onButtonsExecute(['update',element.id])"><i class="material-icons tiny">edit</i></a>
+      </td>
+    </ng-container>
+
+    <ng-container *ngFor="let item of tableOptions.columns" [matColumnDef]="item.field">
+      <th [ngStyle]="{ 'width.%' : item.width}" mat-header-cell *matHeaderCellDef> {{ item.name }}
+      </th>
+      <td mat-cell *matCellDef="let element">{{element[item.field]}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="COLUMNS"></tr>
+    <tr mat-row *matRowDef="let row; columns: COLUMNS"></tr>
+  </table>
+
+</div>
